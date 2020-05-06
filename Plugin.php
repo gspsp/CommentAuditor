@@ -5,7 +5,7 @@
  * @package CommentAuditor
  * @author ihesro
  * @version 1.0.2
- * @link https://b.nit9.cn
+ * @link https://b.nit9.cn/index.php/cross.html
  */
 class CommentAudit_plugin implements Typecho_Plugin_Interface{
   //启用时
