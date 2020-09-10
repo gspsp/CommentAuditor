@@ -5,7 +5,7 @@
  * @package CommentAuditor
  * @author sp
  * @version 1.0.4
- * @link https://index.php/cross.html
+ * @link https://b.nit9.cn/archives/9.html
  */
 class CommentAuditor_Plugin implements Typecho_Plugin_Interface
 {
