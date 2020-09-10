@@ -2,7 +2,7 @@
 
 /**
  * 评论审核员
- *
+ * 启用插件后请在设置面板配置百度内容审核api，否则此插件无效
  * @package CommentAuditor
  * @author ihesro
  * @version 1.0.4
