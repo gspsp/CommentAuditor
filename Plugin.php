@@ -3,7 +3,7 @@
 /**
  * 启用插件后请在设置面板配置百度内容审核api，否则此插件无效
  * @package CommentAuditor
- * @author ihesro
+ * @author sp
  * @version 1.0.4
  * @link https://index.php/cross.html
  */
