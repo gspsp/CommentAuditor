@@ -3,7 +3,7 @@
 /**
  * 启用插件后请在设置面板配置百度内容审核api，否则将拦截所有评论
  * @package CommentAuditor
- * @author sp
+ * @author 食用教程
  * @version 1.0.4
  * @link https://b.nit9.cn/archives/9.html
  */
