@@ -4,8 +4,8 @@
  * 启用插件后请在设置面板配置百度内容审核api，否则将拦截所有评论
  * @package CommentAuditor
  * @author 食用教程
- * @version 1.0.4
- * @link https://b.nit9.cn/archives/9.html
+ * @version 1.0.5
+ * @link https://b.saytf.cn/archives/9.html
  */
 class CommentAuditor_Plugin implements Typecho_Plugin_Interface
 {
@@ -35,22 +35,7 @@ class CommentAuditor_Plugin implements Typecho_Plugin_Interface
     //获取配置项
     $opt = Typecho_Widget::widget('Widget_Options')->plugin('CommentAuditor');
     $check = self::check($comment['text'] . $comment['author'], $opt->apiKey, $opt->secretKey);
-    $res = array(
-      "type" => @$check['conclusionType'] == 1 ? 'safe' : 'evil',
-      "reason" => @isset($check['data'][0]['msg']) ? $check['data'][0]['msg'] : ''
-    );
-    if ($res['type'] == 'evil') {
-      $comment['text'] .= "
-        <font style='display: inline-block;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);margin:20px 0px;padding:15px;border-radius:5px;font-size:14px;color:#000000;'>
-          因昵称或评论内容
-          &nbsp;*<font style='border-bottom: #C7254E 1.5px solid;'>" . $res['reason'] . "</font>*&nbsp;
-          &nbsp;进入博主复核。——<a href='https://b.nit9.cn/archives/9.html' target='_blank'>CommentAuditor</a>
-        </font>
-      ";
-      $comment['status'] = 'waiting';
-    } else {
-      $comment['status'] = 'approved';
-    }
+    $comment['status'] =@$check['conclusionType'] == 1 ?'approved' : 'waiting';
     return $comment;
   }
 
