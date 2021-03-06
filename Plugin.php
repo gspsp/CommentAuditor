@@ -38,7 +38,7 @@ class CommentAuditor_Plugin implements Typecho_Plugin_Interface
     $res = array(
       "type" => @$check['conclusionType'] == 1 ? 'safe' : 'evil',
       "reason" => @isset($check['data'][0]['msg']) ? $check['data'][0]['msg'] : ''
-    );
+    ); 
     if ($res['type'] == 'evil') {
       $comment['text'] .= "
         <font style='display: inline-block;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);margin:20px 0px;padding:15px;border-radius:5px;font-size:14px;color:#000000;'>
