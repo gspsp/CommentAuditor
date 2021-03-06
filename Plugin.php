@@ -35,7 +35,7 @@ class CommentAuditor_Plugin implements Typecho_Plugin_Interface
     //获取配置项
     $opt = Typecho_Widget::widget('Widget_Options')->plugin('CommentAuditor');
     $check = self::check($comment['text'] . $comment['author'], $opt->apiKey, $opt->secretKey);
-    $comment['status'] =@$check['conclusionType'] == 1 ?'approved' : 'waiting';
+    @$comment['status'] = $check['conclusionType'] == 1 ? 'approved' : 'waiting';
     return $comment;
   }
 
