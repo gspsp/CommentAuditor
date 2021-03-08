@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 启用插件后请在设置面板配置百度内容审核api地址，否则将拦截所有评论
+ * 启用插件后请设置api地址，否则将拦截所有评论
  * @package CommentAuditor
  * @author 食用教程
  * @version 1.0.5
