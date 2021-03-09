@@ -32,7 +32,15 @@ class CommentAuditor_Plugin implements Typecho_Plugin_Interface
     //获取配置项
     $opt = Typecho_Widget::widget('Widget_Options')->plugin('CommentAuditor');
     $d = self::fetch($opt->apiUrl, 'POST', array(
-      'text' => $comment['text'] . $comment['author']
+      'text' => $comment['text']
+    ));
+    $r = json_decode($d['res'], true);
+    if ($r['type'] != 1) {
+      $comment['status'] = 'waiting';
+      return $comment;
+    }
+    $d = self::fetch($opt->apiUrl, 'POST', array(
+      'text' => $comment['author']
     ));
     $r = json_decode($d['res'], true);
     if ($r['type'] != 1) {
