@@ -1,2 +1,3 @@
 # CommentAuditor
-一款typecho评论自动审核插件。
+一款typecho插件。
+[食用方法](https://b.nit9.cn/archives/9.html)
