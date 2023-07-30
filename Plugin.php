@@ -4,7 +4,7 @@
  * 启用插件后请在设置面板配置百度内容审核api，否则将拦截所有评论
  * @package CommentAuditor
  * @author ihesro
- * @version 1.0.4
+ * @version 1.0.5
  * @link http://www.galasp.cn
  */
 class CommentAuditor_Plugin implements Typecho_Plugin_Interface
