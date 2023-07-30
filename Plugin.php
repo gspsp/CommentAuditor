@@ -5,7 +5,7 @@
  * @package CommentAuditor
  * @author ihesro
  * @version 1.0.4
- * @link https://b.nit9.cn/archives/9.html
+ * @link http://www.galasp.cn
  */
 class CommentAuditor_Plugin implements Typecho_Plugin_Interface
 {
